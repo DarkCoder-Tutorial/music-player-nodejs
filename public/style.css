@@ -158,17 +158,17 @@ html {
 }
 
 .playlist.active {
-  width: 100%;
-  top: 0;
+  display: block;
 }
 
 .playlist {
   position: absolute;
-  width: 0;
+  top: 0;
+  width: 100%;
   overflow-y: scroll;
   background: #566573;
   border-radius: 1rem;
-  transition: ease-in-out 0.3s;
+  display: none;
 }
 
 .playlist::-webkit-scrollbar {
