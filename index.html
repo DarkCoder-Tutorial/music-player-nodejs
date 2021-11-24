@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="player">
+        <div class="player__nav">
+          <button
+            class="player__btn player__btn__playlist--toggle"
+            onClick="playlistToggle()"
+          >
+            <i class="bx bx-menu-alt-left"></i>
+          </button>
+        </div>
+        <div class="player__cd">
+          <img
+            class="player__cd__img"
+            src="https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/1/7/d/f/17df138d6b0c38c8a07ee502a49573cd.jpg"
+            alt="cd-img"
+          />
+        </div>
+      </div>
+      <div class="player__control">
+        <div class="player__control__song">
+          <p class="player__control__song--title">Cưa Là Đổ</p>
+          <p class="player__control__song--artistsNames">Phát Hồ, X2X</p>
+        </div>
+        <div class="player__control__buttons">
+          <div class="btn__slider">
+            <input
+              id="range__slider"
+              type="range"
+              min="1"
+              max="100"
+              value="0"
+            />
+            <p id="song__time">00:00</p>
+          </div>
+          <div class="btn__navigation">
+            <button
+              id="btn__previous"
+              class="player__btn btn__navigation__control"
+            >
+              <i class="bx bx-skip-previous"></i>
+            </button>
+            <button
+              id="btn__control"
+              class="player__btn btn__navigation__control"
+            >
+              <i id="btn__toggle" class="bx bx-play"></i>
+            </button>
+            <button id="btn__next" class="player__btn btn__navigation__control">
+              <i class="bx bx-skip-next"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="playlist" id="playlist">
+        <div class="playlist__items"></div>
+      </div>
+      <div class="audio">
+        <audio id="audio">
+          <source type="audio/mpeg" />
+        </audio>
+      </div>
+    </div>
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
