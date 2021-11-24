@@ -262,7 +262,7 @@ class Player {
   }
 }
 
-let player = new Player(topNhacTre);
+let player = new Player(topNhacVpopVN);
 player.renderPlaylist();
 player.play(0);
 
