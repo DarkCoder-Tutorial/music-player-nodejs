@@ -14,9 +14,25 @@ document.getElementById("playlist").style.height = `${
   document.getElementById("container").clientHeight * 0.14
 }px`;
 
+//add marginTop top100
+document.getElementById("top100").style.marginTop = `${
+  document.getElementById("container").clientHeight * 0.14
+}px`;
+
+//add height top100
+document.getElementById("top100").style.height = `${
+  document.getElementById("container").clientHeight -
+  document.getElementById("container").clientHeight * 0.14
+}px`;
+
 // toggle playlist
 function playlistToggle() {
   document.querySelector("#playlist").classList.toggle("active");
+}
+
+// toggle top100 list
+function changePlayList() {
+  document.querySelector("#top100").classList.toggle("active");
 }
 
 /*
@@ -48,7 +64,7 @@ class Player {
   play(id) {
     audio.src = this.listSongs[id].url;
     this.setUI(
-      this.listSongs[id].thumbnail,
+      this.listSongs[id].thumbnailM,
       this.listSongs[id].title,
       this.listSongs[id].artistsNames
     );
@@ -246,9 +262,16 @@ class Player {
   }
 }
 
-let player = new Player(songs);
+let player = new Player(topNhacTre);
 player.renderPlaylist();
 player.play(0);
+
+function setPlayList(dataTopList) {
+  player = new Player(dataTopList)
+  player.renderPlaylist();
+  player.play(0);
+  document.querySelector("#top100").classList.toggle("active");
+}
 
 // add event change on slider
 slider.addEventListener("change", (e) => {

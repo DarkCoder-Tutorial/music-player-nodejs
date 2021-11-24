@@ -23,6 +23,11 @@ html {
   font-size: 62.5%;
 }
 
+.player__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .player__btn {
   width: 4.5rem;
   height: 4.5rem;
@@ -154,17 +159,16 @@ html {
 
 .playlist.active {
   width: 100%;
-  bottom: 0rem;
+  top: 0;
 }
 
 .playlist {
   position: absolute;
   width: 0;
-  bottom: -100rem;
   overflow-y: scroll;
   background: #566573;
   border-radius: 1rem;
-  transition: linear 0.5s;
+  transition: ease-in-out 0.3s;
 }
 
 .playlist::-webkit-scrollbar {
