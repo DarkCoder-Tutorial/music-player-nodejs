@@ -28,11 +28,13 @@ document.getElementById("top100").style.height = `${
 // toggle playlist
 function playlistToggle() {
   document.querySelector("#playlist").classList.toggle("active");
+  document.querySelector("#top100").classList.remove("active");
 }
 
 // toggle top100 list
 function changePlayList() {
   document.querySelector("#top100").classList.toggle("active");
+  document.querySelector("#playlist").classList.remove("active");
 }
 
 /*
@@ -85,7 +87,18 @@ class Player {
 
   setPlay(id) {
     // remove active song previous
-    if (document.querySelector(`.p__song-${ID_SONG_ACTIVE}`) != null) {
+    if (ID_SONG_ACTIVE == undefined) {
+      document.querySelector(".p__song-0").classList.toggle("active");
+      document
+        .querySelector(".p__song__icon--play-0")
+        .classList.toggle("active");
+    } else if (ID_SONG_ACTIVE == 0) {
+      document.querySelector(".p__song-0").classList.toggle("active");
+      document
+        .querySelector(".p__song__icon--play-0")
+        .classList.toggle("active");
+      ID_SONG_ACTIVE = 0
+    } else {
       document
         .querySelector(`.p__song-${ID_SONG_ACTIVE}`)
         .classList.toggle("active");
@@ -262,14 +275,22 @@ class Player {
   }
 }
 
-let player = new Player(topNhacVpopVN);
+let player = new Player(topNhac.topNhacVpopVN);
 player.renderPlaylist();
 player.play(0);
+document.querySelector(".p__song-0").classList.toggle("active");
+document
+  .querySelector(".p__song__icon--play-0")
+  .classList.toggle("active");
 
 function setPlayList(dataTopList) {
-  player = new Player(dataTopList)
+  player = new Player(dataTopList);
   player.renderPlaylist();
   player.play(0);
+  player.getHandleControl();
+  ID_SONG_ACTIVE = 0;
+  document.querySelector(".p__song-0").classList.toggle("active");
+  document.querySelector(".p__song__icon--play-0").classList.toggle("active");
   document.querySelector("#top100").classList.toggle("active");
 }
 

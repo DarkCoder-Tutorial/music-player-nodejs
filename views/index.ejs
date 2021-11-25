@@ -83,12 +83,12 @@
 
           <div class="p__song-">
             <div class="p__song__info">
-              <p class="p__song__info__title">Top 100 Nhạc Trẻ Việt Nam</p>
+              <p class="p__song__info__title">Top 100 Nhạc Vpop Việt Nam</p>
             </div>
             <div class="p__song__icon">
               <button
                 class="p__song__icon--play- player__btn"
-                onclick="setPlayList(topNhacTre)"
+                onclick="setPlayList(topNhac.topNhacVpopVN)"
               >
                 <i class="bx bx-play"></i>
               </button>
@@ -102,7 +102,7 @@
             <div class="p__song__icon">
               <button
                 class="p__song__icon--play- player__btn"
-                onclick="setPlayList(topNhacDanceVN)"
+                onclick="setPlayList(topNhac.topNhacDanceVN)"
               >
                 <i class="bx bx-play"></i>
               </button>
@@ -111,12 +111,12 @@
 
           <div class="p__song-">
             <div class="p__song__info">
-              <p class="p__song__info__title">Top 100 Nhạc V-pop Việt Nam</p>
+              <p class="p__song__info__title">Top 100 Nhạc Rap Việt</p>
             </div>
             <div class="p__song__icon">
               <button
                 class="p__song__icon--play- player__btn"
-                onclick="setPlayList(topNhacVpopVN)"
+                onclick="setPlayList(topNhac.topNhacRapViet)"
               >
                 <i class="bx bx-play"></i>
               </button>
@@ -125,12 +125,12 @@
 
           <div class="p__song-">
             <div class="p__song__info">
-              <p class="p__song__info__title">Top 100 Nhạc Không Lời Việt Nam</p>
+              <p class="p__song__info__title">Top Nhạc Bolero Việt Nam</p>
             </div>
             <div class="p__song__icon">
               <button
                 class="p__song__icon--play- player__btn"
-                onclick="setPlayList(topNhacKhongLoiVN)"
+                onclick="setPlayList(topNhac.topNhacBolero)"
               >
                 <i class="bx bx-play"></i>
               </button>
@@ -139,12 +139,12 @@
 
           <div class="p__song-">
             <div class="p__song__info">
-              <p class="p__song__info__title">Top 100 Nhạc Phim Việt Nam</p>
+              <p class="p__song__info__title">Top 100 Nhạc Âu Mỹ</p>
             </div>
             <div class="p__song__icon">
               <button
                 class="p__song__icon--play- player__btn"
-                onclick="setPlayList(topNhacPhimVN)"
+                onclick="setPlayList(topNhac.topNhacAuMy)"
               >
                 <i class="bx bx-play"></i>
               </button>
@@ -153,87 +153,18 @@
 
           <div class="p__song-">
             <div class="p__song__info">
-              <p class="p__song__info__title">Top 100 Nhạc Trữ Tình Việt Nam</p>
+              <p class="p__song__info__title">Top 100 Nhạc Hoa</p>
             </div>
             <div class="p__song__icon">
               <button
                 class="p__song__icon--play- player__btn"
-                onclick="setPlayList(topNhacTruTinh)"
+                onclick="setPlayList(topNhac.topNhacHoa)"
               >
                 <i class="bx bx-play"></i>
               </button>
             </div>
           </div>
 
-          <div class="p__song-">
-            <div class="p__song__info">
-              <p class="p__song__info__title">Top 100 Nhạc Trịnh</p>
-            </div>
-            <div class="p__song__icon">
-              <button
-                class="p__song__icon--play- player__btn"
-                onclick="setPlayList(topNhacTrinh)"
-              >
-                <i class="bx bx-play"></i>
-              </button>
-            </div>
-          </div>
-
-          <div class="p__song-">
-            <div class="p__song__info">
-              <p class="p__song__info__title">Top 100 Nhạc Country Âu Mỹ</p>
-            </div>
-            <div class="p__song__icon">
-              <button
-                class="p__song__icon--play- player__btn"
-                onclick="setPlayList(topNhacCountryAuMy)"
-              >
-                <i class="bx bx-play"></i>
-              </button>
-            </div>
-          </div>
-
-          <div class="p__song-">
-            <div class="p__song__info">
-              <p class="p__song__info__title">Top 100 Nhạc Pop Âu Mỹ</p>
-            </div>
-            <div class="p__song__icon">
-              <button
-                class="p__song__icon--play- player__btn"
-                onclick="setPlayList(topPopAuMy)"
-              >
-                <i class="bx bx-play"></i>
-              </button>
-            </div>
-          </div>
-
-          <div class="p__song-">
-            <div class="p__song__info">
-              <p class="p__song__info__title">Top 100 Nhạc Rap/HipHop Âu Mỹ</p>
-            </div>
-            <div class="p__song__icon">
-              <button
-                class="p__song__icon--play- player__btn"
-                onclick="setPlayList(topRapHipHopAuMy)"
-              >
-                <i class="bx bx-play"></i>
-              </button>
-            </div>
-          </div>
-
-          <div class="p__song-">
-            <div class="p__song__info">
-              <p class="p__song__info__title">Top 100 Nhạc Hàn Quốc</p>
-            </div>
-            <div class="p__song__icon">
-              <button
-                class="p__song__icon--play- player__btn"
-                onclick="setPlayList(topNhacHanQuoc)"
-              >
-                <i class="bx bx-play"></i>
-              </button>
-            </div>
-          </div>
 
         </div>
       </div>
@@ -243,17 +174,7 @@
         </audio>
       </div>
     </div>
-    <script src="./data/topNhacTre.js"></script>
-    <script src="./data/topNhacDanceVN.js"></script>
-    <script src="./data/topNhacVpopVN.js"></script>
-    <script src="./data/topNhacKhongLoiVN.js"></script>
-    <script src="./data/topNhacPhimVN.js"></script>
-    <script src="./data/topNhacTruTinh.js"></script>
-    <script src="./data/topNhacTrinh.js"></script>
-    <script src="./data/topNhacCountryAuMy.js"></script>
-    <script src="./data/topPopAuMy.js"></script>
-    <script src="./data/topRapHipHopAuMy.js"></script>
-    <script src="./data/topNhacHanQuoc.js"></script>
+    <script src="./data/topNhac.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
