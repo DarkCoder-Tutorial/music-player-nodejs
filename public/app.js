@@ -147,6 +147,10 @@ class Player {
     }
     if (ID_SONG_ACTIVE == undefined) {
       ID_SONG_ACTIVE = 0;
+      document.querySelector(".p__song-0").classList.toggle("active");
+      document
+        .querySelector(".p__song__icon--play-0")
+        .classList.toggle("active");
     }
     ID_SONG_ACTIVE += 1;
     this.play(ID_SONG_ACTIVE);
@@ -176,6 +180,10 @@ class Player {
 
     if (ID_SONG_ACTIVE == undefined) {
       ID_SONG_ACTIVE = 0;
+      document.querySelector(".p__song-0").classList.toggle("active");
+      document
+        .querySelector(".p__song__icon--play-0")
+        .classList.toggle("active");
     }
 
     ID_SONG_ACTIVE -= 1;
